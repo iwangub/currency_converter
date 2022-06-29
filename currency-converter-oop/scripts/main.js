@@ -62,20 +62,6 @@ class Currencies {
 
 }
 
-class Time {
-    static get zone() {
-        let xhttp = new XMLHttpRequest();
-        xhttp.open('GET', 'https://raw.githubusercontent.com/sanohin/google-timezones-json/master/timezones.json', false);
-        let zone;
-        xhttp.onload = function () {
-            zone = JSON.parse(xhttp.responseText);
-        };
-        xhttp.send()
-        return zone;
-    }
-}
-
-console.log(Time.zone["Europe/Paris"])
 
 function calc() {
 
